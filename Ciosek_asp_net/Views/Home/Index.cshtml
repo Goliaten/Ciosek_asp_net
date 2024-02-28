@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    List<int> lista = new List<int>{ 1, 2, 3, 4, 5 };
+    string color;
+}
+
+<div class="text-center">
+    <ol>
+    @foreach(var v in lista)
+    {
+
+        @if (v % 2 == 0){
+            color = "red";
+        }
+        else{
+            color = "blue";
+        }
+        <li style="color:@color">@v</li>
+    }
+    </ol>
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
