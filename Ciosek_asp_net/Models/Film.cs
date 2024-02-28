@@ -7,10 +7,11 @@ namespace Ciosek_asp_net.Models
         [Key]
         public int Id { get; set; }
         public string Tytul { get; set; }
-        public int Rezyser { get; set; }
-        public int Opis{ get; set; }
-        public int Cena { get; set; }
-        public int Data_dodania{ get; set; }
-        //cena, data dodania
+        public string Rezyser { get; set; }
+        public string Opis { get; set; }
+        public decimal Cena { get; set; }
+        public DateTime Data_dodania{ get; set; }
+        public int KategoriaId { get; set; }
+        public Kategoria Kategoria { get; set; }
     }
 }
