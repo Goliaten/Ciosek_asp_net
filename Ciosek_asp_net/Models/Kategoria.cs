@@ -6,8 +6,9 @@ namespace Ciosek_asp_net.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Nazwa jest wymagana")]
         public string Nazwa { get; set; }
-        public string Opis { get; set; }
+        public string? Opis { get; set; }
         public ICollection<Film> Filmy { get; set; }
     }
 }
