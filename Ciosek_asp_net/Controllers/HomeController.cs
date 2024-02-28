@@ -13,6 +13,11 @@ namespace Ciosek_asp_net.Controllers
             _logger = logger;
         }
 
+        public IActionResult StronaStatyczna()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
