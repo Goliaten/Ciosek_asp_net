@@ -26,6 +26,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "Strony",
+    pattern: "Info/{nazwa}",
+    defaults: new { controller="Home", action="StronaStatyczna"}
+    );
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
