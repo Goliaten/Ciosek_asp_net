@@ -58,13 +58,16 @@
       </button>
       <a class="navbar-brand" href="#">Logo</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                @(await Component.InvokeAsync("Menu"))
+        <!--
+                <ul class="nav navbar-nav">
         <li class="active"><a href="@Url.Action("Index","Home")">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="@Url.Action("Privacy","Home")">Privacy</a></li>
       </ul>
+      -->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
@@ -75,9 +78,9 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+       <p><a href="#">Link</a></p>
+       <p><a href="#">Link</a></p>
+       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
         @RenderBody()

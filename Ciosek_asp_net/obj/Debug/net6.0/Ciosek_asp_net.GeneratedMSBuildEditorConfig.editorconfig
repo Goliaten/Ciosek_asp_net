@@ -16,16 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Filmy/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbXlcTGlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Filmy/Szczegoly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbXlcU3pjemVnb2x5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Home/Kontakt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLb250YWt0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Home/MainLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Home/MetodyPlatnosci.cshtml]
@@ -46,6 +50,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Home/StronaStatyczna.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJvbmFTdGF0eWN6bmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Shared/Components/FilmyKategorii/_FilmyKategorii.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmlsbXlLYXRlZ29yaWlcX0ZpbG15S2F0ZWdvcmlpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Shared/Components/Menu/_Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxfTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Shared/MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Film>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+
+    <p>123</p>
+    @foreach(var film in Model)
+    {
+        <div>@film.Tytul</div>
+        <div>@film.Rezyser</div>
+        <div>@film.Data_dodania</div>
+        <div>@film.Cena</div>
+        <a href="@Url.Action("Szczegoly", "Filmy", new{idFilmu = film.Id})">Szczegóły</a>
+        
+    }
+</div>

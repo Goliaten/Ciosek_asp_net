@@ -1,0 +1,12 @@
+﻿@model Film
+@{
+}
+<div>
+
+    @(await Component.InvokeAsync("FilmyKategorii", new {nazwaKategorii = Model.Kategoria.Nazwa}))
+    <p>@Model.Tytul</p>
+    <p>@Model.Opis</p>
+    <p>@Model.Cena</p>
+    <p>@Model.Data_dodania</p>
+    <p>@Model.Rezyser</p>
+</div>

@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Nowy folder1\**" />
+    <Compile Remove="Views\Nowy folder\**" />
+    <Compile Remove="Views\Shared\Component\**" />
+    <Compile Remove="Views\Shared\Nowy folder\**" />
+    <Content Remove="Views\Nowy folder1\**" />
+    <Content Remove="Views\Nowy folder\**" />
+    <Content Remove="Views\Shared\Component\**" />
+    <Content Remove="Views\Shared\Nowy folder\**" />
+    <EmbeddedResource Remove="Views\Nowy folder1\**" />
+    <EmbeddedResource Remove="Views\Nowy folder\**" />
+    <EmbeddedResource Remove="Views\Shared\Component\**" />
+    <EmbeddedResource Remove="Views\Shared\Nowy folder\**" />
+    <None Remove="Views\Nowy folder1\**" />
+    <None Remove="Views\Nowy folder\**" />
+    <None Remove="Views\Shared\Component\**" />
+    <None Remove="Views\Shared\Nowy folder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.27" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.27" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.27">

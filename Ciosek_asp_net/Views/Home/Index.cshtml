@@ -6,30 +6,8 @@
 }
 
 <div class="text-center">
-    <ol>
-    @foreach(var v in lista)
+    @foreach (var kategoria in Model)
     {
-
-        @if (v % 2 == 0){
-            color = "red";
-        }
-        else{
-            color = "blue";
-        }
-        <li style="color:@color">@v</li>
-        
+        <a href="@Url.Action("Lista", "Filmy", new{nazwaKategorii = kategoria.Nazwa})">@kategoria.Nazwa</a>
     }
-    </ol>
-    <ol>
-        @foreach(var kategoria in Model)
-        {
-            <li>
-            @kategoria.Nazwa
-            @kategoria.Opis
-            @kategoria.Filmy
-            </li>
-        }
-    </ol>
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
