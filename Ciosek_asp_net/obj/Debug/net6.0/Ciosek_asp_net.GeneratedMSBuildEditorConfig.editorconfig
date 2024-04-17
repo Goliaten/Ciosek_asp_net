@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Filmy/DodajFilm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbXlcRG9kYWpGaWxtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/109/source/repos/Goliaten/Ciosek_asp_net/Ciosek_asp_net/Views/Filmy/Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbXlcTGlzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

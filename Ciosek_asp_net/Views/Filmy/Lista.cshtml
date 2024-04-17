@@ -4,15 +4,13 @@
 }
 
 <div>
-
-    <p>123</p>
+    <p>c</p>
     @foreach(var film in Model)
     {
         <div>@film.Tytul</div>
-        <div>@film.Rezyser</div>
-        <div>@film.Data_dodania</div>
-        <div>@film.Cena</div>
-        <a href="@Url.Action("Szczegoly", "Filmy", new{idFilmu = film.Id})">Szczegóły</a>
+        <a href="@Url.Action("Szczegoly", "Filmy", new{idFilmu = film.Id})">
+            <img src="~/assets/@film.nazwaPlakatu" alt="@(film.Tytul+" plakat")" style="max-height:250px" />
+        </a>
         
     }
 </div>

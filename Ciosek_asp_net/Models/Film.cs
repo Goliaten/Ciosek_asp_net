@@ -20,6 +20,7 @@ namespace Ciosek_asp_net.Models
         public decimal Cena { get; set; }
 
         public DateTime Data_dodania{ get; set; }
+        public string nazwaPlakatu{ get; set; }
 
         public int KategoriaId { get; set; }
         public Kategoria Kategoria { get; set; }

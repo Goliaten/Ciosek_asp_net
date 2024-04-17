@@ -5,6 +5,46 @@
       "PackagePath": "staticwebassets\\Ciosek_asp_net.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatAvatar.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatAvatar.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatAvatarAang.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatAvatarAang.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatDune.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatDune.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatIluzja.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatIluzja.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatIncepcja.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatIncepcja.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatMatrix.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatMatrix.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatStarWars.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatStarWars.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatSzybcy.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatSzybcy.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatTheRing.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatTheRing.webp"
+    },
+    {
+      "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatTroopers.webp",
+      "PackagePath": "staticwebassets\\assets\\plakatTroopers.webp"
+    },
+    {
       "Id": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

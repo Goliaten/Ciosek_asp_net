@@ -34,4 +34,21 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\plakatAvatar.webp" />
+    <None Include="wwwroot\assets\plakatAvatarAang.webp" />
+    <None Include="wwwroot\assets\plakatDune.webp" />
+    <None Include="wwwroot\assets\plakatIluzja.webp" />
+    <None Include="wwwroot\assets\plakatIncepcja.webp" />
+    <None Include="wwwroot\assets\plakatMatrix.webp" />
+    <None Include="wwwroot\assets\plakatStarWars.webp" />
+    <None Include="wwwroot\assets\plakatSzybcy.webp" />
+    <None Include="wwwroot\assets\plakatTheRing.webp" />
+    <None Include="wwwroot\assets\plakatTroopers.webp" />
+  </ItemGroup>
+
 </Project>

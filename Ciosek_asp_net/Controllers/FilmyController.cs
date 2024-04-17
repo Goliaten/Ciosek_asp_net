@@ -1,4 +1,5 @@
 ﻿using Ciosek_asp_net.DAL;
+using Ciosek_asp_net.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -34,5 +35,26 @@ namespace Ciosek_asp_net.Controllers
             var film = db.Filmy.Find(idFilmu);
             return View(film);
         }
+
+        [HttpGet]
+        public IActionResult DodajFilm()
+        {
+            DodawanieFilmow dodaj = new DodawanieFilmow();
+
+            var kategorie = db.Kategorie.ToList();
+            dodaj.kategorie = kategorie;
+
+            return View(dodaj);
+        }
+
+        public IActionResult DodajFilm(DodawanieFilmow obj)
+        {
+            obj.film.Data_dodania = DateTime.Now;
+
+            db.Filmy.Add(obj.film);
+
+            return View("DodajFilm");
+        }
+
     }
 }
