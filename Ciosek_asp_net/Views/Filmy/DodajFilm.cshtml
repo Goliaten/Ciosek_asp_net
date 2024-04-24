@@ -4,14 +4,43 @@
 
 }
 
-@using (Html.BeginForm("DodajFilm", "Film", FormMethod.Post))
+@using (Html.BeginForm("DodajFilm", "Filmy", FormMethod.Post, new {enctype = "multipart/form-data" }))
 {
-    <div>Tytuł filmu: @Html.TextBoxFor(f=>f.film.Tytul)</div>
-    <div>Opis filmu: @Html.TextBoxFor(f=>f.film.Opis)</div>
-    <div>Cena filmu: @Html.TextBoxFor(f=>f.film.Cena)</div>
-    <div>Reżyser: @Html.TextBoxFor(f=>f.film.Rezyser)</div>
-    <div>Nazwa plakatu: @Html.TextBoxFor(f=>f.film.nazwaPlakatu)</div>
-    @Html.ListBox(f=>f.film.Kategoria, Model.kategorie)
+    <div>
+        @Html.LabelFor(f=>f.plakat, "Nazwa plakatu:")
+        @Html.TextBoxFor(f=>f.plakat, new{@type = "file"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.film.Tytul, "Tytuł:")
+        @Html.TextBoxFor(f=>f.film.Tytul, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.film.Opis, "Opis filmu:")
+        @Html.TextBoxFor(f=>f.film.Opis, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.film.Cena, "Cena filmu:")
+        @Html.TextBoxFor(f=>f.film.Cena, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.film.Rezyser, "Reżyser:")
+        @Html.TextBoxFor(f=>f.film.Rezyser, new{@class = "form-control"})
+    </div>
+    <!--
+    <div>
+        @Html.LabelFor(f=>f.film.nazwaPlakatu, "Nazwa plakatu:")
+        @Html.TextBoxFor(f=>f.film.nazwaPlakatu, new{@class = "form-control"})
+    </div>
+    -->
+    <div>
+
+        @foreach(var v in Model.kategorie)
+        {
+            <label>
+                @Html.RadioButtonFor(f=>f.film.KategoriaId, v.Id, v.Id) @v.Nazwa
+            </label>
+        }
+    </div>
     //@Html.TextBoxFor(f=>f.film.Kategoria)
     <button type="submit">Submit</button>
 }

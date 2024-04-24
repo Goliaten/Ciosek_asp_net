@@ -9,10 +9,13 @@ namespace Ciosek_asp_net.Controllers
     public class FilmyController : Controller
     {
         FilmyContext db;
+        IWebHostEnvironment hostEnvironment;
 
-        public FilmyController(FilmyContext db)
+
+        public FilmyController(FilmyContext db, IWebHostEnvironment hostEnvironment)
         {
             this.db = db;
+            this.hostEnvironment = hostEnvironment;
         }
         public IActionResult Index()
         {
@@ -51,9 +54,19 @@ namespace Ciosek_asp_net.Controllers
         {
             obj.film.Data_dodania = DateTime.Now;
 
+            var pathPlakat = Path.Combine(hostEnvironment.WebRootPath, "assets");
+            var nazwaPlakatuUnikat = Guid.NewGuid() + "_" + obj.plakat.FileName;
+            var sciezkaDoPlakatu = Path.Combine(pathPlakat, nazwaPlakatuUnikat);
+            obj.plakat.CopyTo(new FileStream(sciezkaDoPlakatu, FileMode.Create));
+
+            obj.film.nazwaPlakatu = nazwaPlakatuUnikat;
+
             db.Filmy.Add(obj.film);
 
-            return View("DodajFilm");
+            db.SaveChanges();
+
+            return RedirectToAction("Szczegoly", new { idFilmu = obj.film.Id });
+            //return View("DodajFilm");
         }
 
     }
