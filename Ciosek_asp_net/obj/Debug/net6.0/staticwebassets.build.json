@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NYUx4LdSGpF/5ftiejKb8FpQtBmE0s6UiLaE6rwAcPI=",
+  "Hash": "1DJ9hMBiz8JbsRuw3Ns6gC+vxICmhp5U3g6RjtqXVjg=",
   "Source": "Ciosek_asp_net",
   "BasePath": "_content/Ciosek_asp_net",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Ciosek_asp_net.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\ddfca392-8a3c-42e4-b13a-ca7ad6fdfa94_Big_Chungus_29.webp",
+      "SourceId": "Ciosek_asp_net",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\",
+      "BasePath": "_content/Ciosek_asp_net",
+      "RelativePath": "assets/ddfca392-8a3c-42e4-b13a-ca7ad6fdfa94_Big_Chungus_29.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\ddfca392-8a3c-42e4-b13a-ca7ad6fdfa94_Big_Chungus_29.webp"
     },
     {
       "Identity": "C:\\Users\\109\\source\\repos\\Goliaten\\Ciosek_asp_net\\Ciosek_asp_net\\wwwroot\\assets\\plakatAvatar.webp",

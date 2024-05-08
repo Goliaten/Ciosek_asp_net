@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ElementKoszyka>
+@{
+    ViewBag.Title = "Koszyk";
+    }
+<table class="table">
+    @if(Model == null)
+    {
+        <tr>
+            <td>
+                Brak filmów w koszyku
+            </td>
+        </tr>
+    }
+    else { 
+        @foreach(var el in Model)
+        {
+            <tr>
+                <td>@el.film.Tytul</td>
+                <td>@el.ilosc</td>
+                <td>@el.wartosc</td>
+            </tr>
+        }
+        <tr>
+            <td>
+                Cena: @ViewBag.CalaSuma zł
+            </td>
+        </tr>
+    }
+</table>
+

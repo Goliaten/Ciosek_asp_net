@@ -56,7 +56,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="@Url.Action("Index", "Home")">Logo</a>
     </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 @(await Component.InvokeAsync("Menu"))
@@ -69,7 +69,7 @@
       </ul>
       -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="@Url.Action("Index", "Koszyk")"><span class="glyphicon glyphicon-log-in"></span> Koszyk</a></li>
       </ul>
     </div>
   </div>
