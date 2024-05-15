@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<ElementKoszyka>
 @{
     ViewBag.Title = "Koszyk";
-    }
+    Layout = "MainLayout";
+}
 <table class="table">
     @if(Model == null)
     {
@@ -16,10 +17,27 @@
         {
             <tr>
                 <td>@el.film.Tytul</td>
-                <td>@el.ilosc</td>
-                <td>@el.wartosc</td>
+                <td>@el.ilosc @if (el.ilosc == 1) {
+                        <span>bilet</span>
+                    }
+                    else if(el.ilosc < 5)
+                    {
+                        <span>bilety</span>
+                    }
+                    else
+                    {
+                        <span>biletów</span>
+                    }
+                </td>
+                <td>@el.wartosc zł/bilet</td>
+                <td><a href="@Url.Action("Usun", "Koszyk", new {id= el.film.Id})">Usuń 1 bilet z koszyka</a></td>
             </tr>
         }
+        <tr>
+            <td>
+                Łączna ilość biletów: @ViewBag.IloscBilet
+            </td>
+        </tr>
         <tr>
             <td>
                 Cena: @ViewBag.CalaSuma zł

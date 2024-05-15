@@ -10,4 +10,5 @@
     <p>@Model.Data_dodania</p>
     <p>@Model.Rezyser</p>
     <img src="~/assets/@Model.nazwaPlakatu" alt="@(Model.Tytul+" plakat")" style="max-height:250px"/>
+    <a href="@Url.Action("Kup", "Koszyk", new {id= Model.Id})">Dodaj do koszyka</a>
 </div>
