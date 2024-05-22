@@ -68,8 +68,10 @@
                     if (response.ilosc == 0) {
                         $("#koszykRz-" + response.id).fadeOut("slow");
                     }
-                }
-                );
+                    else{
+                        $("#element-" + response.id).text(response.ilosc);
+                    }
+                });
             }
         });
     </script>
