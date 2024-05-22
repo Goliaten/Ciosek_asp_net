@@ -1,4 +1,5 @@
-﻿using Ciosek_asp_net.Helpers;
+﻿using Ciosek_asp_net.DAL;
+using Ciosek_asp_net.Helpers;
 using Ciosek_asp_net.Models;
 
 namespace Ciosek_asp_net.Nowy_folder
@@ -31,18 +32,50 @@ namespace Ciosek_asp_net.Nowy_folder
             return ilosc;
         }
 
-        private static object PobierzKoszyk(ISession session)
+        private static List<ElementKoszyka>PobierzKoszyk(ISession session)
         {
             List<ElementKoszyka> koszyk = SessionHelper.GetObjectFromJson<List<ElementKoszyka>>(session, Consts.KluczSesji);
 
-            if (koszyk != null)
+            if (koszyk == null)
             {
-                return koszyk;
+                koszyk = new List<ElementKoszyka>();
+            }
+            return koszyk;
+        }
+
+        public static void DodajDoKoszyka(ISession session, FilmyContext db, int filmId)
+        {
+            var koszyk = PobierzKoszyk(session);
+            var szukanyFilm = koszyk.Find(i => i.film.Id == filmId);
+
+            if (szukanyFilm != null)
+            {
+                szukanyFilm.ilosc++;
             }
             else
             {
-                return new List<ElementKoszyka>();
+                var filmZBazy = db.Filmy.Where(i => i.Id == filmId).FirstOrDefault();
+
+                if (filmZBazy != null) { 
+                    var elementKoszyka= new ElementKoszyka() { ilosc = 1, wartosc = filmZBazy.Cena, film = filmZBazy };
+                    koszyk.Add(szukanyFilm);
+                }
             }
+
+            SessionHelper.SetObjectAsJson(session, Consts.KluczSesji, koszyk);
+        }
+
+        public static int IloscElemKoszyka(ISession session)
+        {
+            var koszyk = PobierzKoszyk(session);
+            return koszyk.Sum(i => i.ilosc);
+        }
+        public static decimal WartoscElemKoszyka(ISession session)
+        {
+            var koszyk = PobierzKoszyk(session);
+            return koszyk.Sum(f => f.film.Cena * f.ilosc);
         }
     }
 }
+
+

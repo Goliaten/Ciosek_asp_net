@@ -1,6 +1,7 @@
 ﻿using Ciosek_asp_net.DAL;
 using Ciosek_asp_net.Helpers;
 using Ciosek_asp_net.Models;
+using Ciosek_asp_net.Nowy_folder;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 using System.Collections.Generic;
@@ -120,9 +121,24 @@ namespace Ciosek_asp_net.Controllers
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            ViewBag.CalaSuma = PobierzWartoscKoszyka();
-            ViewBag.IloscBilet = PobierzIloscRzeczyZKoszyka();
+            ViewBag.CalaSuma = MenedzerKoszyka.WartoscElemKoszyka(HttpContext.Session);
+            ViewBag.IloscBilet = MenedzerKoszyka.IloscElemKoszyka(HttpContext.Session);
+            //ViewBag.CalaSuma = PobierzWartoscKoszyka();
+            //ViewBag.IloscBilet = PobierzIloscRzeczyZKoszyka();
             return await Task.FromResult((IViewComponentResult)View("_Menu", db.Kategorie.ToList()));
         }
+
+        public IActionResult UsunZKoszykaJson(int id)
+        {
+            var model = new UsunModelKoszyk()
+            {
+                id=id,
+                ilosc = MenedzerKoszyka.UsunZKoszyka(HttpContext.Session, id),
+                wartoscKoszyka = MenedzerKoszyka.WartoscElemKoszyka(HttpContext.Session)
+            };
+
+            return Json(model);
+        }
+
     }
 }

@@ -13,11 +13,18 @@
         </tr>
     }
     else { 
+        int cnt = -1;
         @foreach(var el in Model)
         {
-            <tr>
+            cnt += 1;
+            <tr id="koszykRz-@el.film.Id">
                 <td>@el.film.Tytul</td>
-                <td>@el.ilosc @if (el.ilosc == 1) {
+                <td>
+                    <span id="element-@el.film.Id">
+                    @el.ilosc
+                    </span>
+                    @if (el.ilosc == 1)
+                    {
                         <span>bilet</span>
                     }
                     else if(el.ilosc < 5)
@@ -31,6 +38,7 @@
                 </td>
                 <td>@el.wartosc zł/bilet</td>
                 <td><a href="@Url.Action("Usun", "Koszyk", new {id= el.film.Id})">Usuń 1 bilet z koszyka</a></td>
+                <td><a href="#" class="trash" data-id="@el.film.Id">&#128465</a></td>
             </tr>
         }
         <tr>
@@ -46,3 +54,23 @@
     }
 </table>
 
+@section Scripts
+{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <script type="text/javascript">
+        $(".trash").click(function () {
+            var idFilmu = $(this).data('id');
+
+            if(idFilmu != ''){
+                $.post("/Koszyk/UsunZKoszykaJson", { "id": idFilmu }, function (response) 
+                {
+                    if (response.ilosc == 0) {
+                        $("#koszykRz-" + response.id).fadeOut("slow");
+                    }
+                }
+                );
+            }
+        });
+    </script>
+}
