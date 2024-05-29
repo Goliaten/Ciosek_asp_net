@@ -66,3 +66,8 @@ C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\obj\Debug\net6.
 C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\obj\Debug\net6.0\Ciosek_asp_net.pdb
 C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\obj\Debug\net6.0\Ciosek_asp_net.genruntimeconfig.cache
 C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\obj\Debug\net6.0\ref\Ciosek_asp_net.dll
+C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\109\source\repos\Goliaten\Ciosek_asp_net\Ciosek_asp_net\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

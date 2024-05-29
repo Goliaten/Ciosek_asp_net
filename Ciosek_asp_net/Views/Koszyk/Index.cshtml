@@ -42,12 +42,12 @@
             </tr>
         }
         <tr>
-            <td>
+            <td id="IloscBiletow">
                 Łączna ilość biletów: @ViewBag.IloscBilet
             </td>
         </tr>
         <tr>
-            <td>
+            <td id="CenaCalkowita">
                 Cena: @ViewBag.CalaSuma zł
             </td>
         </tr>
@@ -67,10 +67,14 @@
                 {
                     if (response.ilosc == 0) {
                         $("#koszykRz-" + response.id).fadeOut("slow");
+                        console.log(response.id)
                     }
                     else{
                         $("#element-" + response.id).text(response.ilosc);
                     }
+
+                    $("#CenaCalkowita").text("Cena " + response.wartoscKoszyka)
+                    $("#IloscBiletow").text("Łączna ilość biletów: " + response.ilosc + " zł")
                 });
             }
         });

@@ -1,12 +1,30 @@
 using Ciosek_asp_net.DAL;
+using Ciosek_asp_net.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<IdentityAppContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("filmyCS")));
 builder.Services.AddDbContext<FilmyContext>( options=>options.UseSqlServer(
     builder.Configuration.GetConnectionString("filmyCS")));
+
+builder.Services.AddIdentity<AppUser, AppRole>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+    options.Password.RequiredLength = 4;
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+})
+    .AddEntityFrameworkStores<IdentityAppContext>();
 
 builder.Services.AddSession();
 
@@ -25,6 +43,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseSession();
