@@ -1,9 +1,22 @@
 ﻿@model IEnumerable<Kategoria>
 @{
 }
+<ul class="nav navbar-nav">
 @foreach (var kategoria in Model)
 {
-    <a href="@Url.Action("Lista", "Filmy", new{nazwaKategorii = kategoria.Nazwa})">@kategoria.Nazwa</a>
-}
+    <li><a href="@Url.Action("Lista", "Filmy", new{nazwaKategorii = kategoria.Nazwa})">@kategoria.Nazwa</a></li>
+    }
 
+<li><a href="@Url.Action("DodajFilm", "Filmy")">Dodaj Film</a></li>
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <li><a href="@Url.Action("Login", "Account")"> Zaloguj</a></li>
+    <li><a href="@Url.Action("Register", "Account")">Zarejestruj</a></li>
+}
+else
+{
+    <li><a href="@Url.Action("Logout", "Account")"> Wyloguj @User.Identity.Name</a></li>
+}
+</ul>
 

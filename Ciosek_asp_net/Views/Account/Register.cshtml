@@ -1,11 +1,45 @@
-﻿@{
+﻿@model DodawanieUżytkownika
+@{
     ViewData["Title"] = "Rejestracja";
     Layout = "MainLayout";
 }
 
 <h2>
-    Register
+    Rejestracja
 </h2>
 <p>
     @ViewBag.message
 </p>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(f=>f.firstName, "Imię:")
+        @Html.TextBoxFor(f=>f.firstName, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.lastName, "Nazwisko:")
+        @Html.TextBoxFor(f=>f.lastName, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.userName, "Nazwa użytkownika:")
+        @Html.TextBoxFor(f=>f.userName, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.email, "Email:")
+        @Html.TextBoxFor(f=>f.email, new{@class = "form-control"})
+        @Html.ValidationMessageFor(f=>f.email)
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.password, "Hasło:")
+        @Html.PasswordFor(f=>f.password, new{@class = "form-control"})
+        @Html.ValidationMessageFor(f=>f.password)
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.confirmedPassword, "Potwierdź hasło:")
+        @Html.PasswordFor(f=>f.confirmedPassword, new{@class = "form-control"})
+        @Html.ValidationMessageFor(f=>f.confirmedPassword)
+    </div>
+    //@Html.TextBoxFor(f=>f.film.Kategoria)
+    <button type="submit">Zarejestruj</button>
+}

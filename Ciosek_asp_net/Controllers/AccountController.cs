@@ -1,6 +1,8 @@
 ﻿using Ciosek_asp_net.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 
 namespace Ciosek_asp_net.Controllers
 {
@@ -20,6 +22,7 @@ namespace Ciosek_asp_net.Controllers
             return View();
         }
 
+        /*
         public async Task<IActionResult> Register()
         {
             try
@@ -47,11 +50,56 @@ namespace Ciosek_asp_net.Controllers
             }
 
             return View();
+        }*/
+        
+        [HttpGet]
+        public async Task<IActionResult> Register()
+        {
+            return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Register(DodawanieUżytkownika model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            var user = new AppUser()
+            {
+                UserName = model.userName,
+                Email = model.email,
+                FirstName = model.firstName,
+                LastName = model.lastName,
+            };
+            IdentityResult result = await UserMgr.CreateAsync(user, model.confirmedPassword);
+
+
+            var errorList = result.Errors.ToList();
+
+            ViewBag.message = string.Join(", <br>", errorList.Select(e => e.Description));
+            if (!result.Succeeded)
+            {
+                return View();
+            }
+
+            await SignInMgr.SignInAsync(user, false);
+            return RedirectToAction("Index", "Home");
+
+
+        }
+
+        [HttpGet]
         public async Task<IActionResult> Login()
         {
-            var result = await SignInMgr.PasswordSignInAsync("testuser", "test", false, false);
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(DodawanieUżytkownika model)
+        {
+            var result = await SignInMgr.PasswordSignInAsync(model.userName, model.password, false, false);
 
             if (result.Succeeded)
             {
@@ -59,14 +107,14 @@ namespace Ciosek_asp_net.Controllers
             }
             else
             {
-                ViewBag.result = "Status logowania" + result.ToString();
+                ViewBag.result = "Status logowania " + result.ToString();
             }
             return View();
         }
 
         public async Task<IActionResult> Logout()
         {
-            SignInMgr.SignOutAsync();
+            await SignInMgr.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
 

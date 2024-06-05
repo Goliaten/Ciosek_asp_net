@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DodawanieUżytkownika
+@{
     ViewData["Title"] = "Logowanie";
     Layout = "MainLayout";
 }
@@ -9,3 +10,18 @@
 <p>
     @ViewBag.result
 </p>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(f=>f.userName, "Nazwa użytkownika:")
+        @Html.TextBoxFor(f=>f.userName, new{@class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(f=>f.password, "Hasło:")
+        @Html.PasswordFor(f=>f.password, new{@class = "form-control"})
+        @Html.ValidationMessageFor(f=>f.password)
+    </div>
+    //@Html.TextBoxFor(f=>f.film.Kategoria)
+    <button type="submit">Zaloguj</button>
+}
